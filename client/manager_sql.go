@@ -46,7 +46,7 @@ var Migrations = map[string]*dbal.PackrMigrationSource{
 func NewSQLManager(db *sqlx.DB, r InternalRegistry) *SQLManager {
 	return &SQLManager{
 		r:  r,
-		DB: db,
+		DB: db.Unsafe(),
 	}
 }
 
