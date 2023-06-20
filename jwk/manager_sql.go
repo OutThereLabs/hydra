@@ -42,7 +42,7 @@ type SQLManager struct {
 }
 
 func NewSQLManager(db *sqlx.DB, r InternalRegistry) *SQLManager {
-	return &SQLManager{DB: db, R: r}
+	return &SQLManager{DB: db.Unsafe(), R: r}
 }
 
 var Migrations = map[string]*dbal.PackrMigrationSource{

@@ -46,7 +46,7 @@ type SQLManager struct {
 
 func NewSQLManager(db *sqlx.DB, r InternalRegistry) *SQLManager {
 	return &SQLManager{
-		DB: db,
+		DB: db.Unsafe(),
 		r:  r,
 	}
 }
