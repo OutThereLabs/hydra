@@ -683,7 +683,7 @@
     },
     "oauth2": {
       "type": "object",
-      "additionalProperties": false,
+      "additionalProperties": true,
       "properties": {
         "expose_internal_errors": {
           "type": "boolean",
